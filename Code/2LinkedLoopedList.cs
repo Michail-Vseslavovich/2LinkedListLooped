@@ -23,7 +23,6 @@ namespace _2LinkedListLooped
                 Head.Previous.Next = Node;
                 Head.Previous = Node;
             }
-
             count++;
         }
 
@@ -76,6 +75,10 @@ namespace _2LinkedListLooped
         public int GetCount()
         {
             return count;
+        }
+        public bool IsNotEmpty()
+        {
+            return Head != null;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
