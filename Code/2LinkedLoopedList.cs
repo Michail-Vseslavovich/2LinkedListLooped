@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using _2LinkedListLooped.Code;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace _2LinkedListLooped
 {
-    public class DoubleLinkedListLooped<T> : IEnumerable<T>
+    public class DoubleLinkedListLooped<T> : IEnumerable
     {
         DoubleNode<T> Head;
         int count;
@@ -83,24 +84,10 @@ namespace _2LinkedListLooped
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable)this).GetEnumerator();
+            return new LoopEnumerator<T>(Head);
+
         }
 
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
-        {
-            DoubleNode<T> CurrentNode = Head;
-            do
-            {
-                if (CurrentNode != null)
-                {
-                    yield return CurrentNode.Next.Value;
-                }
-                else
-                {
-                    throw new Exception("Bezdarnost opredeli spisok a potom iterirui KURWA");
-                }
-            }
-            while (CurrentNode != Head);
-        }
+
     }
 }
