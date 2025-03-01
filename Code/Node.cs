@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace _2LinkedListLooped
+namespace LinkedListLooped
 {
     public class DoubleNode<T>
     {

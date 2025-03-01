@@ -1,12 +1,12 @@
-﻿using _2LinkedListLooped.Code;
+﻿using LinkedListLooped.Code;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace _2LinkedListLooped
+namespace LinkedListLooped
 {
     public class DoubleLinkedListLooped<T> : IEnumerable
     {
-        DoubleNode<T> Head;
+        public DoubleNode<T> Head;
         int count;
         public void Add(T Data)
         {
