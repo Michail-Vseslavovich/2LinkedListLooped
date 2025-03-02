@@ -44,7 +44,7 @@ namespace LinkedListLooped.Code
             get
             {
 
-                return current.Value;
+                return current;
             }
         }
         public void Reset()
